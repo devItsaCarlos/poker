@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Póker Academy</title>
+    <link rel="stylesheet" type = "text/css" href="estilo.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <!--ESCRITO POR CARLOS ALBERTO GARCÍA ALVARADO CAGA-->
+        <a href="#" class="marca">
+            <img src="logo.png" alt="Póker Academy Logo" class="logo">
+        </a> 
+        <h1>
+            Póker Academy
+        </h1>
+        <div class="menu_desplegable" id="menuIconDesp">
+            <img src="menu_desplegable.png" alt="Menú" />
+        </div>
+        <ul>
+            <nav class="menu">
+                <a href="#">Para novatos</a>
+                <a href="#">Texas hold'em</a>
+                <a href="#">Blackjack 21</a>
+                <a href="#">Para expertos</a>
+                <li><a href="https://nombre-del-proyecto.onrender.com" target="_blank">Proyecto Django</a></li>
+        
+            </nav> 
+        </ul>
+                
+    </header>
+<!--ESCRITO POR CARLOS ALBERTO GARCÍA ALVARADO CAGA-->
+
+
+<section class="hero">
+
+    <h1 id="typed">Bienvenido a Póker Academy</h1>
+    <p>Aprende las mejores estrategias para Texas Hold'em y Blackjack 21.</p>
+    <a id = "btnComienzaAhora" class="btnHeroBanner" href="#">Comienza ahora</a>
+
+</section>
+<!--ESCRITO POR CARLOS ALBERTO GARCÍA ALVARADO CAGA-->
+
+<!-- Sección con varias columnas de imágenes circulares -->
+<section class="imagenes-circulares">
+    <div data-aos="zoom-in-down" class="grid-circulares">
+        <a href="#" class="columna">
+            <img src="img1.jpg" alt="Imagen 1" class="img-circular">
+            <p>Reglas del póker Texas hold'em & Blackjack 21</p>
+        </a>
+        <a href="#" class="columna">
+            <img src="img2.jpg" alt="Imagen 2" class="img-circular">
+            <p>El arte del engaño</p>
+        </a>
+        <a href="#" class="columna">
+            <img src="img3.jpg" alt="Imagen 3" class="img-circular">
+            <p>Libro: Manipulación oscura en el póker</p>
+        </a>
+    </div>
+</section>
+
+<!-- Sección especial con dos columnas, una con una sola imágen y la otro con textos y botón -->
+<section class="dos-columnas_boton">
+    <div class="contenedor-dos-columnas">
+        <div data-aos="fade-down-left" class="columna-imagen">
+            <img src="img4.jpg" alt="Objetos para jugar al póker" class="imagen-grande">
+        </div>
+        <div class="columna-texto">
+            <h2>¡Aprende jugando!</h2>
+            <p>Descuento especial para novatos, 65 % de Descuento.</p>
+            <a href="#" id = "btnUneteAhora" data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"  class="boton">Únete Ahora</a>
+        </div>
+    </div>
+</section>
+<!--ESCRITO POR CARLOS ALBERTO GARCÍA ALVARADO CAGA-->
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+          <h4>Atención personal</h4>
+          <ul>
+            <li><a href="#">Preguntas frecuentes</a></li>
+            <li><a href="#">Cómo registrarse</a></li>
+            <li><a href="#">Atención al cliente</a></li>
+            <li><a href="#">Venta de libros y cursos</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-column">
+          <h4>Términos y ajustes</h4>
+          <ul>
+            <li><a href="#">Privacidad y cookies</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
+            <li><a href="#">Declaración sobre la esclavitud moderna</a></li>
+            <li><a href="#">Declaración sobre derechos humanos</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Acerca de</h4>
+          <ul>
+            <li><a href="#">Acerca de mí</a></li>
+            <li><a href="#">Contactos</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-flag">
+          <img src="bandera_mexico.png" alt="MXN">
+          <span>MXN</span>
+        </div>
+        <div class="footer-logos">
+        <ul>
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="x.png" alt="Twitter"></a></li>
+            <a href="#"><img src="whatsapp.png" alt="WhatsApp"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"> </a>
+            <a href="#"> <img src="telegrama.png" alt="Telegram"></a>
+
+        </ul>
+        </div>
+      </div>
+</footer>
+
+</body>
+<script>
+
+    // Asegúrate de que el DOM esté completamente cargado antes de ejecutar el script
+document.addEventListener("DOMContentLoaded", function() {
+  // Selecciona el icono del menú y el contenedor del menú
+  const menuIcon = document.getElementById('menuIconDesp');
+  const menuLista = document.querySelector('.menuLista');
+
+  // Agrega un evento de clic para mostrar u ocultar el menú
+  menuIcon.addEventListener('click', () => {
+    menuLista.classList.toggle('active'); // Añade o quita la clase 'active'
+    menuIcon.style.display = menuLista.classList.contains('active') ? 'none' : 'block'; 
+  });
+});
+
+</script>
+<script>
+    window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.innerWidth > 768) { 
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    } else {
+        navbar.classList.remove('scrolled'); 
+    }
+});
+
+</script>
+<script>
+    // Función para el botón "Comienza ahora"
+document.getElementById('btnComienzaAhora').addEventListener('click', function(event) {
+    event.preventDefault(); // Previene que el enlace se ejecute
+    alert('¡Bienvenido a Póker Academy! Comienza tu aventura.');
+});
+
+// Función para el botón "Únete Ahora"
+document.getElementById('btnUneteAhora').addEventListener('click', function(event) {
+    event.preventDefault(); // Previene que el enlace se ejecute
+    alert('¡Únete a Póker Academy y obtén tu descuento!');
+});
+</script>
+
+<script>
+    // Selecciona la sección hero
+const heroSection = document.querySelector('.hero');
+
+// Array de imágenes de fondo
+const images = [
+    'poker-academy-school.png', 
+    'background_2.png',
+    'background_3.png',
+    'background_4.png',
+];
+
+// Contador para el índice de la imagen
+let currentIndex = 0;
+
+// Función para cambiar la imagen de fondo
+function changeBackgroundImage() {
+    // Cambia la imagen de fondo de la sección hero
+    heroSection.style.backgroundImage = `linear-gradient(rgba(255, 17, 17, 0.5), 
+    rgba(214, 98, 98, 0.5)), 
+    url('${images[currentIndex]}')`;
+    
+    // Actualiza el índice para la siguiente imagen
+    currentIndex = (currentIndex + 1) % images.length; 
+}
+
+// Cambia la imagen de fondo cada 3 segundos
+setInterval(changeBackgroundImage, 3000);
+
+</script> 
+
+<script 
+  src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js">
+</script>
+<script 
+src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+</script>
+<script>
+    AOS.init();
+</script>
+
+<script>
+    var typed2 = new Typed('#typed', {
+        strings: ["Bienvenido amante del azar", "Aventurate ahora", "Diviertete y gana", "Compite","Aprende en PÓKER ACADEMY"],   
+        typeSpeed: 150,
+        loop: false,
+        autoInsertCss: true,
+        backSpeed: 10
+    });
+</script>
